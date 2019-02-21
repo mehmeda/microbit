@@ -68,7 +68,7 @@ void uart_send(char letter) {
     UART->TXD = letter;
     while (!UART->TXDRDY);
     UART->TXDRDY = 0;
-    UART->STOPTX = 1;
+    UART->STOPTX = 1; 
 }
 
 char uart_read() {
