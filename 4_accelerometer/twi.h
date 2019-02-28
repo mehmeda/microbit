@@ -3,6 +3,8 @@
 #include <stdint.h>
 
 #define TWIO ((NRF_TWI_REG*)0x40003000)
+#define SDA_PIN 30
+#define SCL_PIN	0
 
 typedef struct {
 	//Tasks
