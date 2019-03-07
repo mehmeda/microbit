@@ -36,7 +36,8 @@ void twi_multi_read(
     TWIO->TXDSENT = 0;
     TWIO->TXD = start_register;
 
-    while (!TWIO->TXDSENT) {uart_send('A');}
+    while (!TWIO->TXDSENT) {}
+    uart_send('A');
     TWIO->TXDSENT = 0;
 
     TWIO->STARTRX = 1;
